@@ -1,0 +1,24 @@
+# this yaml config file goes in .themer/templates/i3/config.yaml
+variables:
+  primary: magenta
+  secondary: green
+  tertiary: red
+  special: yellow
+  transparency: 85
+  fontName: terminus
+  fontSize: 10
+  font: "-*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*"
+  xrsFont: "Envy Code R for Powerline"
+  pangoFont: "pango:Envy Code R"
+  window_style: pixel 2
+files:
+  xresources.tpl: Xresources
+  index.tpl: index.html
+  i3.tpl: i3.conf
+  i3lock.tpl: i3lock-color.sh
+  theme.tpl: i3blocks-theme.sh
+  fish.tpl: config.fish
+  i3blocks.tpl: i3blocks-config
+postflight:
+   i3lock.tpl: fix-i3lock.sh
+   fish.tpl: fix-fish.sh

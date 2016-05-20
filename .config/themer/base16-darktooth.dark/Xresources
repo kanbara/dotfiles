@@ -1,0 +1,45 @@
+
+! vim: set ft=xdefaults:
+
+URxvt.*font: xft:Envy Code R For Powerline:size=10
+URxvt.*cursorColor: #a89984
+
+URxvt.*scrollBar: False
+URxvt.*iso14755: False
+URxvt.*iso14755_52: False
+
+URxvt.*background: [85]#1d2021
+URxvt.*foreground: #a89984
+! black
+URxvt.*color0: #1d2021
+URxvt.*color8: #665c54
+! red
+URxvt.*color1: #fb543f
+URxvt.*color9: #fb543f
+! green
+URxvt.*color2: #95c085
+URxvt.*color10: #95c085
+! yellow
+URxvt.*color3: #fac03b
+URxvt.*color11: #fac03b
+! blue
+URxvt.*color4: #0d6678
+URxvt.*color12: #0d6678
+! magenta
+URxvt.*color5: #8f4673
+URxvt.*color13: #8f4673
+! cyan
+URxvt.*color6: #8ba59b
+URxvt.*color14: #8ba59b
+! white
+URxvt.*color7: #a89984
+URxvt.*color15: #fdf4c1
+! underline when default
+URxvt.*colorUL: #a89984
+
+URxvt*.perl-lib: /usr/lib64/URxvt/perl
+URxvt*.perl-ext-common: default,matcher,searchable-scrollback
+URxvt*.urlLauncher: /usr/bin/google-chrome
+URxvt*.matcher.button: 1
+
+URxvt*.matcher.rend.0: Uline Bold fg4
