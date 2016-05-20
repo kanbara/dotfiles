@@ -1,0 +1,1 @@
+/home/BLACKBRIDGE/jay.morrow/.config/themer/current/config.fish

@@ -1,0 +1,30 @@
+alt_black: '#5f6d64'
+alt_blue: '#478c90'
+alt_cyan: '#1c9aa0'
+alt_green: '#489963'
+alt_magenta: '#55859b'
+alt_red: '#b16139'
+alt_white: '#ecf4ee'
+alt_yellow: '#a07e3b'
+background: '#171c19'
+black: '#171c19'
+blue: '#478c90'
+cyan: '#1c9aa0'
+font: -*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*
+fontName: terminus
+fontSize: 10
+foreground: '#87928a'
+green: '#489963'
+magenta: '#55859b'
+pangoFont: pango:Envy Code R
+primary: '#55859b'
+red: '#b16139'
+secondary: '#489963'
+special: '#a07e3b'
+tertiary: '#b16139'
+themeName: base16-ateliersavanna.dark
+transparency: 85
+white: '#87928a'
+window_style: pixel 2
+xrsFont: Envy Code R for Powerline
+yellow: '#a07e3b'
