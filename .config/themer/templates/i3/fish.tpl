@@ -1,14 +1,11 @@
 
 set FLINE_PATH $HOME/.config/fish/fishline
 source $FLINE_PATH/fishline.fish
-#source $FLINE_PATH/themes/tty-compatible.fish
 source ~/.fishmarks/marks.fish
 
 set -g -x PATH ~/bin ~/bin/AnypointStudio $PATH
 set -g -x MULE_HOME ~/mule/mule-standalone-3.7.0
-#set -g -x JAVA_HOME /usr/java/jdk1.8.0_05/jre
-#set FLCLR_USERHOST_FG cyan
-set -g -x JAVA_HOME /usr/lib64/jvm/java-1.7.0-openjdk-1.7.0/jre
+set -g -x JAVA_HOME /usr/lib/jvm/java-9-openjdk-amd64/
 
 set -x LESS -R
 set -x LESSOPEN '|~/.lessfilter %s'
@@ -39,7 +36,9 @@ set fish_color_valid_path --underline
 
 
 # base16 shell
-eval sh $HOME/.config/base16-shell/{{ themeName }}.sh
+if status --is-interactive
+    eval sh $HOME/.config/base16-shell/{{ themeName }}.sh
+end
 
 source $FLINE_PATH/themes/jay.fish
 
