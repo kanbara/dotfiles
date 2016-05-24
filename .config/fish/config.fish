@@ -1,1 +1,1 @@
-/home/BLACKBRIDGE/jay.morrow/.config/themer/current/config.fish
+/home/takuya/.config/themer/current/config.fish

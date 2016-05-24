@@ -69,7 +69,7 @@ font {{ pangoFont }} {{ fontSize }}
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt-256color -e '/usr/bin/fish'
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
