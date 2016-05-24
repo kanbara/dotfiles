@@ -196,8 +196,8 @@ def activate(theme_name):
     """Activate the given theme."""
     symlink(theme_name)
     dest = os.path.join(THEMER_ROOT, theme_name)
-    color_file = os.path.join(dest, 'colors.yaml')
-    colors = CachedColorParser(color_file).read()
+    #color_file = os.path.join(dest, 'colors.yaml')
+    #colors = CachedColorParser(color_file).read()
     #wallfix(dest, colors)
     #IconUpdater(colors['primary'], colors['secondary']).update_icons()
     os.system('xrdb -merge ~/.Xresources')
@@ -512,7 +512,7 @@ if __name__ == '__main__':
     elif action == 'list':
         themes = [
             t for t in os.listdir(THEMER_ROOT)
-            if t not in ('templates', 'current')]
+            if t not in ('base16-256colors-regen', 'templates', 'current')]
         print '\n'.join(sorted(themes))
         sys.exit(0)
     elif action == 'current':

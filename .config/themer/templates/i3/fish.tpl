@@ -51,8 +51,8 @@ function fish_right_prompt
     fishline -s 0 -r GIT VFISH CLOCK
 end
 
-set -x PATH "/home/BLACKBRIDGE/jay.morrow/.pyenv/bin" $PATH
-set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+set -g -x PATH ~/.pyenv/bin $PATH
+set -g -x VIRTUAL_ENV_DISABLE_PROMPT 1
 status --is-interactive; and . (pyenv init -|psub)
 status --is-interactive; and . (pyenv virtualenv-init -|psub)
 

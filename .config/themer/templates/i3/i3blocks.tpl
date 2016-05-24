@@ -28,7 +28,7 @@
 command=$HOME/.config/i3blocks/scripts/$BLOCK_NAME
 separator_block_width=5
 full_text=-
-color={{ tertiary }}
+color={{ white }}
 # full_text=<span font="14"></span>
 markup=pango
 

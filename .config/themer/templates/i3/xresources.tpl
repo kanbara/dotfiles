@@ -2,6 +2,7 @@
 ! vim: set ft=xdefaults:
 
 URxvt.*font: xft:{{ xrsFont.title() }}:size={{ fontSize }}
+! hintstyle hintfull
 URxvt.*cursorColor: {{ white }}
 
 URxvt.*scrollBar: False
