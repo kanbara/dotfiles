@@ -4,8 +4,9 @@ source $FLINE_PATH/fishline.fish
 source ~/.fishmarks/marks.fish
 
 set -g -x PATH ~/bin ~/bin/AnypointStudio $PATH
-set -g -x MULE_HOME ~/mule/mule-standalone-3.7.0
-set -g -x JAVA_HOME /usr/lib/jvm/java-9-openjdk-amd64/
+set -g -x MULE_HOME ~/pl/mule/mule-standalone-3.7.0
+set -g -x JAVA_HOME /usr/lib/jvm/oracle_jdk8
+set -g -x ECLIPSE_HOME ~/pl/eclipse
 
 set -x LESS -R
 set -x LESSOPEN '|~/.lessfilter %s'
@@ -43,7 +44,7 @@ end
 source $FLINE_PATH/themes/jay.fish
 
 function fish_prompt
-   fishline -s $status USERHOST HYBRIDPWD WRITE SIGSTATUS N ARROW
+   fishline -s $status USERHOST HYBRIDPWD WRITE STATUS N ARROW
 end
 
 function fish_right_prompt
