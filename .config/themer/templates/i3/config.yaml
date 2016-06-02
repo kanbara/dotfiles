@@ -4,7 +4,6 @@ variables:
   secondary: green
   tertiary: red
   special: yellow
-  transparency: 85
   fontName: terminus
   fontSize: 10
   font: "-*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*"

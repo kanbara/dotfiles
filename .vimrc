@@ -46,6 +46,8 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'nvie/vim-flake8'
 " tmuxline
 Plugin 'edkolev/tmuxline.vim'
+" tagbar -- class outline viewer
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 filetype on
@@ -82,7 +84,7 @@ set nostartofline " `prevent cursor from changing current column when switching 
 set confirm " PRESS ENTER TO CONFIRM
 set noerrorbells visualbell " please no beeping dear lord!
 set cmdheight=2 " two line cmd height
-set timeout timeoutlen=300 ttimeoutlen=0 "helps with macro input
+set notimeout ttimeout ttimeoutlen=0 "helps with macro input
 set scrolloff=2 " move the screen when the cursor is +/- 2
 
 set hlsearch " highlight matches
@@ -112,8 +114,6 @@ let g_ctrlp_working_path_mode = 'r'
 
 let g:buffergator_supress_keymaps = 1
 
-nmap <LEADER>kk :BuffergatorMruCyclePrev<CR>
-nmap <LEADER>ll :BuffergatorMruCycleNext<CR>
 nmap <LEADER><TAB> :BuffergatorMruCycleNext<CR>
 nnoremap <silent><F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>``
 
@@ -141,6 +141,7 @@ inoremap \\ <ESC>
 nmap <LEADER>l :set list!<CR>
 map Y y$
 
+map <F2> :TagbarToggle<CR>
 " cool! highlight last chars in insert mode :D
 nnoremap gV `[v`]
 
@@ -180,6 +181,10 @@ map <F9> :Test<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 
+" omni complete
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+
 " auto reload vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -212,3 +217,5 @@ function! g:ToggleColorColumn()
 endfunction
 
 nnoremap <silent> <leader>p :call g:ToggleColorColumn()<CR>
+let g:ctrlp_root_markers = ['pom.xml']
+
