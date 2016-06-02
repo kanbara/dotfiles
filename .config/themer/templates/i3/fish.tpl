@@ -1,6 +1,6 @@
 
 set FLINE_PATH $HOME/.config/fish/fishline
-source $FLINE_PATH/fishline.fish
+source $FLINE_PATH/init.fish
 source ~/.fishmarks/marks.fish
 
 set -g -x PATH ~/bin ~/bin/AnypointStudio $PATH
@@ -35,6 +35,7 @@ set fish_color_status {{ red }}
 set fish_color_user '-o'  '{{ green }}'
 set fish_color_valid_path --underline
 
+set fish_prompt_pwd_dir_length 4
 
 # base16 shell
 if status --is-interactive
@@ -44,7 +45,7 @@ end
 source $FLINE_PATH/themes/jay.fish
 
 function fish_prompt
-   fishline -s $status USERHOST HYBRIDPWD WRITE STATUS N ARROW
+   fishline -s $status USERHOST PWD WRITE SIGSTATUS N ARROW
 end
 
 function fish_right_prompt
