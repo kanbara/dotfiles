@@ -77,8 +77,7 @@ bindsym $mod+Shift+q kill
 # random theme (pipe)
 bindsym $mod+Scroll_Lock exec rand
 
-#bindsym $mod+d exec fish -c 'rofi -show run -font "Envy Code R 11" -fg "#f2f1b9" -bg "#372725" -i -lines 20 -width 50 -bw 5 -hide-scrollbar -bc "#372725" -bg-active "#372725" -hlbg "#ff5879" -terminal urxvt-256color'
-bindsym $mod+d exec fish -c 'rofi -show run -font "{{ xrsFont }} {{ fontSize }}" -fg "{{ foreground }}" -bg "{{ background }}" -i -lines 20 -width 50 -bw 5 -hide-scrollbar -bc "{{ background }}" -bg-active "{{ background }}" -hlbg "{{ tertiary }}" -terminal urxvt-256color'
+bindsym $mod+d exec fish -c 'rofi -show run -font "{{ rofiFont }} {{ rofiFontSize }}" -fg "{{ foreground }}" -bg "argb:00000000" -i -lines 8 -width 100 -padding 500 -hide-scrollbar -bc "argb:00000000" -hlbg "{{ tertiary }}" -separator-style "solid" '
 
 # focus parent
 bindsym $mod+c focus parent
