@@ -55,10 +55,10 @@ workspace $w6 output $rightmon
 workspace $w7 output $rightmon
 workspace $w8 output $rightmon
 
-smart_gaps on
+#smart_gaps on
 smart_borders on
-gaps inner 15
-gaps outer 20
+gaps inner 25
+gaps outer 35
 
 assign [class="^VirtualBox"] "4: work"
 
@@ -77,7 +77,9 @@ bindsym $mod+Shift+q kill
 # random theme (pipe)
 bindsym $mod+Scroll_Lock exec rand
 
-bindsym $mod+d exec fish -c 'rofi -show run -font "{{ rofiFont }} {{ rofiFontSize }}" -fg "{{ foreground }}" -bg "argb:00000000" -i -lines 8 -width 100 -padding 500 -hide-scrollbar -bc "argb:00000000" -hlbg "{{ tertiary }}" -separator-style "solid" '
+# -m monitor (always left)
+bindsym $mod+d exec fish -c 'rofi -show run -font "{{ rofiFont }} {{ rofiFontSize }}" -fg "#eeeeee" -bg "argb:00000000" -i -lines 8 -width 100 -padding 500 -hide-scrollbar -bc "argb:00000000" -hlbg "{{ tertiary }}" -separator-style "solid" -m 0 '
+
 
 # focus parent
 bindsym $mod+c focus parent
@@ -129,7 +131,7 @@ bindsym $mod+z focus child
 bindsym $mod+minus gaps inner current minus 5
 bindsym $mod+plus gaps inner current plus 5
 
-floating_minimum_size 1300 x 833
+#floating_minimum_size 1300 x 833
 
 # switch to workspace
 bindsym $mod+1 workspace number $w1
