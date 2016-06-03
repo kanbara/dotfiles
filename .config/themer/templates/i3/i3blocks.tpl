@@ -49,6 +49,7 @@ interval=once
 signal=10
 
 [separator]
+color={{ secondary }}
 
 #CPU usage
 #
@@ -72,6 +73,8 @@ command=date '+%a %d %b %R %z'
 interval=5
 
 [separator]
+full_text=/
+color={{ tertiary }}
 
 [timeny]
 full_text=
@@ -79,6 +82,8 @@ label=NY
 interval=5
 
 [separator]
+full_text=/
+color={{ tertiary }}
 
 [timesf]
 full_text=

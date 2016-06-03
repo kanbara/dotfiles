@@ -6,9 +6,12 @@ variables:
   special: yellow
   fontName: terminus
   fontSize: 10
+  i3fontSize: 11
   font: "-*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*"
+  rofiFont: "Deja Vu Sans"
+  rofiFontSize: 20
   xrsFont: "Envy Code R for Powerline"
-  pangoFont: "pango:Envy Code R"
+  pangoFont: "pango:Envy Code R For Powerline"
   window_style: pixel 2
 files:
   xresources.tpl: Xresources

@@ -63,7 +63,7 @@ gaps outer 35
 assign [class="^VirtualBox"] "4: work"
 
 font {{ font }}
-font {{ pangoFont }} {{ fontSize }}
+font {{ pangoFont }} {{ i3fontSize }}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
