@@ -209,7 +209,6 @@ bindsym $mod+Pause mode "$mode_system"
 # finds out, if available)
 bar {
    height 25
-      tray_output primary
       position top
       status_command i3blocks
 
