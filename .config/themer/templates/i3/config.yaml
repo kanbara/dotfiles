@@ -21,6 +21,7 @@ files:
   theme.tpl: i3blocks-theme.sh
   fish.tpl: config.fish
   i3blocks.tpl: i3blocks-config
+  highlight.tpl: base16.theme
 postflight:
    i3lock.tpl: fix-i3lock.sh
    fish.tpl: fix-fish.sh
