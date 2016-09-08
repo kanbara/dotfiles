@@ -1,0 +1,32 @@
+alt_black: '#808080'
+alt_blue: '#0000d3'
+alt_cyan: '#02abea'
+alt_green: '#1fb714'
+alt_magenta: '#4700a5'
+alt_red: '#dd0907'
+alt_white: '#ffffff'
+alt_yellow: '#fbf305'
+background: '#000000'
+black: '#000000'
+blue: '#0000d3'
+cyan: '#02abea'
+font: -*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*
+fontName: terminus
+fontSize: 10
+foreground: '#c0c0c0'
+green: '#1fb714'
+i3fontSize: 11
+magenta: '#4700a5'
+pangoFont: pango:Envy Code R For Powerline
+primary: '#4700a5'
+red: '#dd0907'
+rofiFont: Deja Vu Sans
+rofiFontSize: 20
+secondary: '#1fb714'
+special: '#fbf305'
+tertiary: '#dd0907'
+themeName: base16-macintosh.dark
+white: '#c0c0c0'
+window_style: pixel 2
+xrsFont: Envy Code R for Powerline
+yellow: '#fbf305'

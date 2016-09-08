@@ -1,0 +1,32 @@
+alt_black: '#655d5d'
+alt_blue: '#7272ca'
+alt_cyan: '#5485b6'
+alt_green: '#4b8b8b'
+alt_magenta: '#8464c4'
+alt_red: '#ca4949'
+alt_white: '#f4ecec'
+alt_yellow: '#a06e3b'
+background: '#1b1818'
+black: '#1b1818'
+blue: '#7272ca'
+cyan: '#5485b6'
+font: -*-dejavu sans-*-*-*-*-10-*-*-*-*-*-*-*
+fontName: terminus
+fontSize: 10
+foreground: '#8a8585'
+green: '#4b8b8b'
+i3fontSize: 11
+magenta: '#8464c4'
+pangoFont: pango:Envy Code R For Powerline
+primary: '#8464c4'
+red: '#ca4949'
+rofiFont: Deja Vu Sans
+rofiFontSize: 20
+secondary: '#4b8b8b'
+special: '#a06e3b'
+tertiary: '#ca4949'
+themeName: base16-atelierplateau.dark
+white: '#8a8585'
+window_style: pixel 2
+xrsFont: Envy Code R for Powerline
+yellow: '#a06e3b'
