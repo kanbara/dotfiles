@@ -1,2 +1,0 @@
-#!/bin/bash
-i3lock-color --insidevercolor=b6b3ebff --insidewrongcolor=ffc66dff --insidecolor=2b2b2bff --ringvercolor=b6b3ebff --ringwrongcolor=ffc66dff --ringcolor=2b2b2bff --linecolor=00000000 --textcolor=f9f7f3ff --keyhlcolor=da4939ff --bshlcolor=da4939ff $@

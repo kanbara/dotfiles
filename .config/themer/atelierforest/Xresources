@@ -1,0 +1,47 @@
+
+! vim: set ft=xdefaults:
+
+xterm*faceName: Envy Code R For Powerline:size=10
+*.font: xft:Envy Code R For Powerline:size=10
+! hintstyle hintfull
+*.cursorColor: #a8a19f
+
+*.scrollBar: False
+*.iso14755: False
+*.iso14755_52: False
+
+*.background: #1b1918
+*.foreground: #a8a19f
+! black
+*.color0: #1b1918
+*.color8: #766e6b
+! red
+*.color1: #f22c40
+*.color9: #f22c40
+! green
+*.color2: #7b9726
+*.color10: #7b9726
+! yellow
+*.color3: #c38418
+*.color11: #c38418
+! blue
+*.color4: #407ee7
+*.color12: #407ee7
+! magenta
+*.color5: #6666ea
+*.color13: #6666ea
+! cyan
+*.color6: #3d97b8
+*.color14: #3d97b8
+! white
+*.color7: #a8a19f
+*.color15: #f1efee
+! underline when default
+*.colorUL: #a8a19f
+
+.*perl-lib: /usr/lib64/URxvt/perl
+.*perl-ext-common: default,matcher,searchable-scrollback
+.*urlLauncher: /usr/bin/google-chrome
+.*matcher.button: 1
+
+.*matcher.rend.0: Uline Bold fg4

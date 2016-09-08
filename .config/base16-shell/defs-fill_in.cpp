@@ -1,41 +1,19 @@
-*.foreground:   #e1e1e1
-*.background:   #2a2e35
-*.cursorColor:  #e1e1e1
-
-base00:       #5a5a5a
-base03:       #8c8c8c
-base08:   #de8990
-*.color9:   #d0a8ab
-base0B:   #94daa9
-*.color10:  #bae8d2
-base0A:   #dee7aa
-*.color11:  #d7c96b
-base0D:   #9cdbdf
-*.color12:  #6cb4dd
-base0E:   #cca8c9
-*.color13:  #db79bf
-base0C:   #9ad4c8
-*.color14:  #59b0b2
-base05:   #e1e1e1
-base07:  #f0f0f0
-
-
-#define base00 "15/17/18"
-#define base01 "8e/c4/3d"
-#define base02 "3B/75/8C"
-#define base03 "41/53/5B"
-#define base04 "43/a5/d5"
-#define base05 "d6/d6/d6"
-#define base06 "ee/ee/ee"
+#define base00 "00/00/00"
+#define base01 "20/20/20"
+#define base02 "30/30/30"
+#define base03 "50/50/50"
+#define base04 "b0/b0/b0"
+#define base05 "d0/d0/d0"
+#define base06 "e0/e0/e0"
 #define base07 "ff/ff/ff"
-#define base08 "Cd/3f/45"
-#define base09 "db/7b/55"
-#define base0A "e6/cd/69"
-#define base0B "9f/ca/56"
-#define base0C "55/db/be"
-#define base0D "55/b5/db"
-#define base0E "a0/74/c4"
-#define base0F "8a/55/3f"
+#define base08 "eb/00/8a"
+#define base09 "f2/93/33"
+#define base0A "f8/ca/12"
+#define base0B "37/b3/49"
+#define base0C "00/aa/bb"
+#define base0D "0e/5a/94"
+#define base0E "b3/1e/8d"
+#define base0F "7a/2d/00"
 
 color00=base00
 color01=base08
