@@ -11,6 +11,7 @@ set -g -x ECLIPSE_HOME ~/pl/eclipse
 set -x LESS -R
 set -x LESSOPEN '|~/.lessfilter %s'
 set -x EDITOR vim
+set -x MANPAGER 'most -s'
 
 # colors
 set fish_color_autosuggestion {{ alt_black }}
@@ -36,6 +37,8 @@ set fish_color_user '-o'  '{{ green }}'
 set fish_color_valid_path --underline
 
 set fish_prompt_pwd_dir_length 4
+
+eval (thefuck --alias | tr '\n' ';')
 
 # base16 shell
 if status --is-interactive

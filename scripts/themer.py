@@ -88,21 +88,21 @@ def render_templates(template_dir, files, context, postflight):
             logger.debug('Creating directory %s' % dir_name)
             os.makedirs(dir_name)
         if src.endswith(('tpl', 'conf')):
-            logger.info('Writing %s -> %s' % (src, dest))
+            logger.debug('Writing %s -> %s' % (src, dest))
             template = env.get_template(src)
             with open(dest, 'w') as fh:
                 fh.write(template.render(**context).encode('utf-8'))
         else:
-            logger.info('Copying %s -> %s' % (src, dest))
+            logger.debug('Copying %s -> %s' % (src, dest))
             shutil.copy(os.path.join(template_dir, src), dest)
 
         if src in postflight.keys():
-            logger.info("Postflight for " + src + " -> " + postflight[src])
+            logger.debug("Postflight for " + src + " -> " + postflight[src])
             path = os.path.join(template_dir, postflight[src])
             subprocess.call([path, dest])
 
         if dest.endswith(('sh')):
-           logger.info("Making " + dest + " executable")
+           logger.debug("Making " + dest + " executable")
            st = os.stat(dest);
            os.chmod(dest, st.st_mode | stat.S_IEXEC)
 
@@ -138,10 +138,10 @@ def wallfix(directory, colors):
             break
 
     if not wallpaper:
-        logger.info('No wallpaper found, generating new one.')
+        logger.debug('No wallpaper found, generating new one.')
         wallpaper = create_wallpaper(colors, directory)
 
-    logger.info('Setting %s as wallpaper' % wallpaper)
+    logger.debug('Setting %s as wallpaper' % wallpaper)
     path = os.path.join(directory, wallpaper)
     os.system('wallfix %s' % path)
 
@@ -180,7 +180,7 @@ Cluster = namedtuple('Cluster', ('points', 'center'))
 
 def symlink(theme_name):
     """Set up a symlink for the new theme."""
-    logger.info('Setting %s as current theme' % theme_name)
+    logger.debug('Setting %s as current theme' % theme_name)
     current = os.path.join(THEMER_ROOT, 'current')
     if os.path.islink(current):
         os.unlink(current)
@@ -243,7 +243,7 @@ def generate(color_source, config_file, template_dir, theme_name):
 
     # Save the vim color scheme.
     if vim:
-        logger.info('Saving vim colorscheme %s.vim' % theme_name)
+        logger.debug('Saving vim colorscheme %s.vim' % theme_name)
         filename = os.path.join(os.environ['HOME'], '.vim/colors/%s.vim' % theme_name)
         with open(filename, 'w') as fh:
             fh.write(vim)
@@ -370,7 +370,7 @@ class AutodetectColorParser(ColorParser):
 
     def kmeans(self, points, k, min_diff):
         clusters = [Cluster([p], p) for p in random.sample(points, k)]
-        logger.info('Calculating %d dominant colors.' % k)
+        logger.debug('Calculating %d dominant colors.' % k)
         while True:
             plists = [[] for i in range(k)]
             for p in points:
@@ -480,12 +480,12 @@ class IconUpdater(object):
                     fh.seek(0)
                     fh.write(contents)
                     file_count += 1
-        logger.info('Checked %d icon files' % file_count)
+        logger.debug('Checked %d icon files' % file_count)
 
 
 def get_parser():
     parser = optparse.OptionParser(usage='usage: %prog [options] [list|activate|generate|current|delete|reload|update_terms] theme_name [color file]')
-    parser.add_option('-t', '--template', dest='template_dir', default='i3')
+    parser.add_option('-t', '--template', dest='template_dir', default='')
     parser.add_option('-c', '--config', dest='config_file', default='config.yaml')
     parser.add_option('-a', '--activate', dest='activate', action='store_true')
     parser.add_option('-v', '--verbose', dest='verbose', action='store_true')
@@ -532,20 +532,23 @@ if __name__ == '__main__':
 
 
     theme_name = args[1]
-    print options
+    #print options
 
     # Add logging handlers.
     handler = logging.StreamHandler()
     logger.addHandler(handler)
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
+    logger.info("Generating {}".format(theme_name))
 
     if action == 'update_terms':
         update_terms(theme_name)
+    elif action == "debug":
+        logger.setLevel(logging.DEBUG)
     elif action == 'activate':
         activate(theme_name)
     elif action == 'delete':
         shutil.rmtree(os.path.join(THEMER_ROOT, theme_name))
-        logger.info('Removed %s' % theme_name)
+        logger.debug('Removed %s' % theme_name)
     else:
         # Find the appropriate yaml config file and load it.
         template_dir = os.path.join(TEMPLATE_ROOT, options.template_dir)
@@ -560,5 +563,5 @@ if __name__ == '__main__':
 
         generate(color_file, config_file, template_dir, theme_name)
 
-        if options.activate or raw_input('Activate now? yN ') == 'y':
+        if options.activate: # or raw_input('Activate now? yN ') == 'y':
             activate(theme_name)
