@@ -12,6 +12,7 @@ set -x LESS -R
 set -x LESSOPEN '|~/.lessfilter %s'
 set -x EDITOR vim
 set -x MANPAGER 'most -s'
+set -x PAGER most
 
 # colors
 set fish_color_autosuggestion {{ alt_black }}
