@@ -3,7 +3,7 @@ set FLINE_PATH $HOME/.config/fish/fishline
 source $FLINE_PATH/init.fish
 source ~/.fishmarks/marks.fish
 
-set -g -x PATH ~/bin ~/bin/AnypointStudio $PATH
+set -g -x PATH ~/bin ~/bin/AnypointStudio ~/pl/planet_common/scripts $PATH
 set -g -x MULE_HOME ~/pl/mule/mule-standalone-3.7.0
 set -g -x JAVA_HOME /usr/lib/jvm/oracle_jdk8
 set -g -x ECLIPSE_HOME ~/pl/eclipse
