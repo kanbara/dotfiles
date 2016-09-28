@@ -538,7 +538,7 @@ if __name__ == '__main__':
     handler = logging.StreamHandler()
     logger.addHandler(handler)
     logger.setLevel(logging.INFO)
-    logger.info("Generating {}".format(theme_name))
+    logger.info("{}".format(theme_name))
 
     if action == 'update_terms':
         update_terms(theme_name)
