@@ -1,3 +1,0 @@
-#!/bin/bash
-
-TZ='America/Los_Angeles' date '+%R'

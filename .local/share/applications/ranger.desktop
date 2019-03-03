@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Ranger
-TryExec=ranger
-Exec=ranger
-Terminal=true
-Icon=utilities-terminal
-Type=Application
-MimeType=inode/directory;inode/mount-point;x-scheme-handler/ssh;x-scheme-handler/smb;x-scheme-handler/nfs;x-scheme-handler/ftp;application/x-gnome-saved-search;

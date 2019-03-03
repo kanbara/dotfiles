@@ -1,16 +1,10 @@
-function fish_prompt --description 'Write out the prompt'
-	# Just calculate these once, to save a few cycles when displaying the prompt
-   if not set -q __fish_prompt_hostname
-       set -g __fish_prompt_hostname (hostname -s)
-   end
+function fish_prompt
+    set --local exit_code $status  # save previous exit code
+    
+    echo -e -n (_pure_prompt_beginning)  # init prompt context (newline, etc.)
+    echo -e (_pure_prompt_first_line)  # print current path, git branch/status, command duration
+    echo -e -n (_pure_prompt $exit_code)  # print prompt
+    echo -e (_pure_prompt_ending)  # reset colors and end prompt
 
-   if not set -q __fish_prompt_normal
-       set -g __fish_prompt_normal (set_color normal)
-   end
-
-   if not set -q __fish_prompt_cwd
-       set -g __fish_prompt_cwd (set_color $fish_color_cwd)
-   end
-
-   echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) (__fish_git_prompt) "$__fish_prompt_normal" '> '
+    set _pure_fresh_session false
 end

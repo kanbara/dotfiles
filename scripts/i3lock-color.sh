@@ -1,1 +1,0 @@
-/home/takuya/.config/themer/current/i3lock-color.sh

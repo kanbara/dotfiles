@@ -1,9 +1,0 @@
- xresources.tpl: Xresources => ~/.
- index.tpl: index.html => current/ (to preview)
- i3.tpl: i3.conf => ~/.config/i3/config
- i3lock.tpl: i3lock-color.sh => ~/scripts
- theme.tpl: i3blocks-theme.sh => ~/.config/i3blocks/scripts/theme
- fish.tpl: config.fish => ~/.config/fish/config.fish
- i3blocks.tpl: i3blocks-config => ~/.config/i3blocks/config
- highlight.tpl: base16.theme => /usr/share/highlight/themes/base16.theme (w ranger scope.sh for hl)
-

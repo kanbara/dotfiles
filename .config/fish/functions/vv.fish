@@ -1,4 +1,3 @@
 function vv
-   vi ~/.vimrc
+	vi ~/.vimrc
 end
-

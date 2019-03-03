@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Have highlight read from STDIN if '-' is given as filename
+
+# Setup - Add to .bashrc:
+# LESSOPEN='|-highlight-less-wrapper "%s"'
+# export LESS=-FMRXis
+
+# Usage:
+# $ less file
+# OR
+# $ pipeline | less
+
+warn () { printf "%s: %s\n" "$(basename "$0")" "$*" 1>&2; }
+die () { warn "$@"; exit 1; }
+
+# Argument checking
+case $# in
+    0)
+        # Allow `exec $0` for less setup
+        echo "LESSOPEN='|-$(readlink -f "$0") "'"%s"'\'
+        exit 255 ;;
+    1)
+        # Only one argument is expected.
+        # less will invoke multiple times given multiple files.
+        file=$1
+        if [[ $file != - && ! -r $file ]]; then  # less passes '-' for STDIN
+            die "Cannot open $file for reading"
+        fi ;;
+    *)
+        die "Expected only one argument" ;;
+esac
+
+# Run highlight
+# highlight will read from STDIN when given a null filename
+run_highlight () {
+    highlight --force -O truecolor --style aiseered "$1"
+}
+
+if [[ $file == - ]]; then  # Run on stdin
+    run_highlight ""
+else
+    run_highlight "$file"
+fi
+
